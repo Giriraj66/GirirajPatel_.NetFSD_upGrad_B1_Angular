@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <h1 style="text-align: center;">SecureBank</h1>
+    <p>Open Your Savings Account Online</p>
+    <hr>
+</header>
+
+  <nav style="text-align: center;">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#apply">Open Account</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <hr>
+
+<main>
+
+    <section>
+        <h2>Customer Registration Form</h2>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label>Full Name:</label>
+            <input type="text" name="fullname" required>
+            <br><br>
+            <label>Email Address:</label>
+            <input type="email" name="email" required>
+            <br><br>
+            <label>Phone Number:</label>
+            <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="10 digit mobile number" required>
+            <br>  <br>
+            <label>PAN Number:</label>
+            <input type="text" name="pan" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" placeholder="ABCDE1234F" title="Enter valid PAN (5 letters, 4 digits, 1 letter)" required>
+            <br><br>
+            <label>IFSC Code:</label>
+            <input type="text" name="ifsc" pattern="[A-Za-z]{4}[0-9]{7}" placeholder="SBIN0001234" title="4 letters followed by 7 digits" required>
+            <br><br>
+           
+            <label>Account Type:</label>
+            <input list="accounts" name="accountType" required>
+
+            <datalist id="accounts">
+                <option value=" Savings">
+                <option value="current">
+                <option value="Salary Account">
+            </datalist>
+            <br><br>
+            <label>Date of Birth:</label>
+            <input type="date" name="dob"  required>
+            <br><br>
+            
+            <label>Monthly Income :</label>
+            <input type="number" name="income" min="0" step="1000" required>
+            <br><br>
+            <label>Upload ID Proof:</label>
+            <input type="file" name="idproof" required>
+            <br><br>
+            <button type="submit">Submit Application</button>
+
+        </form>
+    </section>
+
+</main>
+<footer>
+    <hr>
+    <p>&copy; 2026 SecureBank. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

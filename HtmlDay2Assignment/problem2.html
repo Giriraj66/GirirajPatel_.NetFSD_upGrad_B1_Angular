@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <h1 style="text-align: center;">CityCare Hospital</h1>
+    <p>Online Appointment Booking</p>
+    <hr>
+</header>
+<main>
+
+    <section>
+        <h2 style="text-align: center;">Book Your Appointment</h2>
+
+        <form action="#" method="post" autocomplete="on">
+            <label>Select Department:</label><br>
+            <input list="departments" name="department" placeholder="Type department name" equired>
+
+            <datalist id="departments">
+                <option value="Cardiology">
+                <option value="Neurology">
+                <option value="Orthopedics">
+            </datalist>
+            <br><br>
+            <label>Preferred Doctor:</label><br>
+            <input list="doctors" name="doctor" placeholder="Type or select doctor" required>
+
+            <datalist id="doctors">
+                <option value="Dr. Raj">
+                <option value="Dr. Max">
+                <option value="Dr. Patel">
+                <option value="Dr. Ram">
+            </datalist>
+            <br><br>
+            <label>Appointment Date:</label><br>
+            <input type="date" name="appointmentDate" min="2026-01-01" required>
+            <br><br>
+            <label>Appointment Time:</label><br>
+            <input type="time" name="appointmentTime" id="timeField" required>
+            <br><br>
+            
+            <label>Age:</label><br>
+            <input type="number" name="age" min="0" max="120" step="1" required>
+            <br><br>
+            <label>Phone Number:</label><br>
+            <input type="tel" name="phone" pattern="[6-9]{1}[0-9]{9}" placeholder="Enter 10-digit number" required>
+            <br><br>
+            <label>Email:</label><br>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <br><br>
+
+            
+            <label>Upload Medical Reports:</label><br>
+            <input type="file" name="reports" multiple>
+            <br><br>
+
+            <input type="submit" value="Book Appointment">
+
+        </form>
+    </section>
+
+</main>
+<footer>
+    <hr>
+    <p>CityCare Hospital | Contact: +91 976543658 | info@citycare.com</p>
+    <p>&copy; 2026 CityCare Hospital</p>
+</footer>
+</body>
+</html>
