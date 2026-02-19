@@ -1,0 +1,74 @@
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: white;
+}
+h1, h2, h3 {
+    color: blue;
+}
+
+header {
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.banner {
+    padding: 30px;
+    margin: 20px;
+    border: 2px solid blue;
+    text-align: center;
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+.section {
+    margin: 20px;
+}
+
+.section p {
+    color: blue;
+}
+
+
+.ca{
+   
+    margin: 15px;
+     background-color: white;
+    padding: 20px;
+    border: 2px solid blue;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+#contact {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid blue;
+}
+
+
+input[type="text"] {
+    border: 2px solid blue;
+    padding: 5px;
+}
+
+footer {
+    background-color: blue;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
