@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <h2>Greeting Generator</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button id="greetBtn">Generate Greeting</button>
+    <p id="greetingMsg"></p>
+
+    <script>
+        
+        function generateGreeting(name) {
+            var message = "Hello, " + name + "! Welcome to our website.";
+            document.getElementById("greetingMsg").innerText = message;
+        }
+
+        document.getElementById("greetBtn").addEventListener("click", function() {
+            var userName = document.getElementById("nameInput").value;
+            generateGreeting(userName);
+        });
+    </script>
+
+</body>
+</html>

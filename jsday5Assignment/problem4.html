@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <h2>Student Profile</h2>
+    <div id="studentProfile" style="border:1px solid black; padding:10px; width:250px;"></div>
+    <button id="Btn">Update Marks</button>
+
+    <script>
+        var student = {
+            name: "Raja",
+            rollNo: 101,
+            marks: 75
+        };
+        function updateStudentProfile(studentObj) {
+            document.getElementById("studentProfile").innerHTML =
+                "Name: " + studentObj.name + "<br>" +
+                "Roll No: " + studentObj.rollNo + "<br>" +
+                "Marks: " + studentObj.marks;
+        }
+        function updateMarks(newMarks) {
+            student.marks = newMarks;   
+            updateStudentProfile(student); 
+        }
+
+        updateStudentProfile(student);
+        document.getElementById("Btn").addEventListener("click", function() {
+            updateMarks(90);  
+        });
+
+    </script>
+
+</body>
+</html>
