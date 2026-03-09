@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Register</h1>
+
+<form id="regForm">
+
+<input id="name" placeholder="Name">
+
+<input id="email" placeholder="Email">
+
+<input id="phone" placeholder="Phone">
+
+<button type="submit">Register</button>
+
+</form>
+
+<script type="module">
+
+import {handleRegistration} from "./js/controllers/registrationController.js"
+import {fetchEvents} from "./js/services/apiService.js"
+
+const urlParams=new URLSearchParams(window.location.search)
+
+const eventId=Number(urlParams.get("id"))
+
+let selectedEvent
+
+const loadEvent=async()=>{
+
+const events=await fetchEvents()
+
+selectedEvent=events.find(e=>e.id===eventId)
+
+}
+
+loadEvent()
+
+const form=document.getElementById("regForm")
+
+form.addEventListener("submit",(e)=>{
+
+e.preventDefault()
+
+const data={
+
+eventId:eventId,
+participantName:document.getElementById("name").value,
+email:document.getElementById("email").value,
+phone:document.getElementById("phone").value
+
+}
+
+handleRegistration(data,selectedEvent)
+
+})
+
+</script>
+</body>
+</html>

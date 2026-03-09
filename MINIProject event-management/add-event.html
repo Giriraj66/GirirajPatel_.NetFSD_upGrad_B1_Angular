@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Add Event</h1>
+
+<form id="eventForm">
+
+<input id="title" placeholder="Title">
+
+<textarea id="description" placeholder="Description"></textarea>
+
+<input type="date" id="date">
+
+<input id="location" placeholder="Location">
+
+<input type="number" id="capacity" placeholder="Capacity">
+
+<button type="submit">Add</button>
+
+</form>
+
+<script type="module">
+
+import {handleAddEvent} from "./js/controllers/eventController.js"
+
+const form=document.getElementById("eventForm")
+
+form.addEventListener("submit",(e)=>{
+
+e.preventDefault()
+
+const data={
+
+title:document.getElementById("title").value,
+description:document.getElementById("description").value,
+date:document.getElementById("date").value,
+location:document.getElementById("location").value,
+capacity:Number(document.getElementById("capacity").value)
+
+}
+
+handleAddEvent(data)
+
+})
+
+</script>
+
+</body>
+</html>

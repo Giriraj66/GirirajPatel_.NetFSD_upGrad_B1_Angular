@@ -1,0 +1,32 @@
+{
+  "events": [
+    {
+      "id": "1772695019654",
+      "title": "w dwnd",
+      "description": "swdnlqkndldmsw",
+      "date": "2026-03-13",
+      "location": "Hyderabad",
+      "capacity": 10,
+      "availableSeats": 9
+    },
+    {
+      "id": 1772695990028,
+      "title": "akadn",
+      "description": "sedjbfsd",
+      "date": "2026-03-20",
+      "location": "Hyderabad",
+      "capacity": 10,
+      "availableSeats": 10
+    }
+  ],
+  "registrations": [
+    {
+      "id": "1772695045555",
+      "eventId": 1772695019654,
+      "participantName": "raja",
+      "email": "raja@gmail.com",
+      "phone": "7606938245"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
